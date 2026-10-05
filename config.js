@@ -8,5 +8,7 @@ const GAMES=[
  {key:'snake1v1',label:'Snake 1v1',short:'1v1',color:'#c8aaff',logo:'Snake_1vs1'},
  {key:'pilka',label:'Piłka Nożna',short:'PN',color:'#ffb383',logo:'Pilka-nozna'},
  {key:'galaxy',label:'Galaxy',short:'GX',color:'#9ebdff',logo:null},
- {key:'wyscigi',label:'Wyścigi',short:'WY',color:'#7edfff',logo:null}
+ {key:'wyscigi',label:'Wyścigi',short:'WY',color:'#7edfff',logo:null},
+ {key:'frogjumper',label:'Frog Jumper',short:'FJ',color:'#b5ee72',logo:null},
+ {key:'flickbattle',label:'Flick Battle',short:'FB',color:'#f6a6e5',logo:null}
 ];
