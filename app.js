@@ -10,7 +10,7 @@ const byScore=(a,b)=>b.score-a.score || ((a.ts||0)-(b.ts||0)) || a.id.localeComp
 const trash='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v5M14 11v5"/></svg>';
 let current='ninja',busy=false,readSequence=0,noticeTimeout=null,deleteTarget=null;
 const cache=new Map(),drafts=new Map(),attempts=new Map();
-function logo(g){return g.logo?`<img src="https://triki.zabka.pl/images/game-image-${g.logo}.png" alt="" loading="lazy">`:esc(g.short);}
+function logo(g){if(g.asset)return `<img src="${g.asset}" alt="" loading="lazy">`;return g.logo?`<img src="https://triki.zabka.pl/images/game-image-${g.logo}.png" alt="" loading="lazy">`:esc(g.short);}
 function fallbackImages(){document.querySelectorAll('img').forEach(img=>{img.onerror=()=>{const host=img.parentElement;host.textContent=host.dataset.short||gameByKey(current).short;};});}
 function notify(message,type='ok'){clearTimeout(noticeTimeout);$('notice').textContent=message;$('notice').className=type;$('notice').hidden=false;noticeTimeout=setTimeout(()=>{$('notice').hidden=true;},type==='error'?15000:6500);}
 function state(title,detail,type){$('status-title').textContent=title;$('status-detail').textContent=detail;$('status-icon').className='status-icon '+type;}
