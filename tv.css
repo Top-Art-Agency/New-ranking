@@ -4,3 +4,15 @@
 .leader-bottom #game-short.has-art{padding:0;width:76px;height:60px;overflow:hidden}.leader-bottom #game-short img{display:block;width:100%;height:100%;object-fit:cover}
 
 img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
+
+/* Decorative game artwork behind the TV leaderboard only. */
+.ranking{position:relative;isolation:isolate;border-radius:14px;padding:clamp(12px,1.2vw,24px);background:#14131f;overflow:hidden}
+.ranking-art{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.ranking-art img{display:block;width:100%;height:100%;object-fit:cover;opacity:.32}
+.ranking-art img[hidden]{display:none}
+.ranking-art:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,27,.72),rgba(17,17,27,.24) 45%,rgba(17,17,27,.58))}
+.ranking>:not(.ranking-art){position:relative;z-index:1}
+.ranking .rank-row{background:rgba(24,23,37,.76);border-color:rgba(170,158,193,.16)}
+.ranking .rank-row.first{background:rgba(43,48,37,.87);border-color:#606d42}
+.ranking .board-empty{background:rgba(17,17,27,.3)}
+.ranking .rank-name,.ranking .rank-score,.ranking .rank-number{text-shadow:0 2px 5px rgba(0,0,0,.7)}
