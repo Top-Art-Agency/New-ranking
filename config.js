@@ -1,5 +1,12 @@
 'use strict';
-const DB='https://triki-ranking-2-default-rtdb.europe-west1.firebasedatabase.app';
+const FIREBASE_ROOT='https://triki-ranking-2-default-rtdb.europe-west1.firebasedatabase.app';
+const TEST_SESSION=(()=>{const id=typeof location==='undefined'?null:new URLSearchParams(location.search).get('test');if(id!==null&&!/^browser_[a-f0-9]{32}$/.test(id))throw new Error('Nieprawidłowy identyfikator testu — połączenie z bazą zatrzymane.');return id;})();
+const DB=TEST_SESSION?`${FIREBASE_ROOT}/__load_tests/${TEST_SESSION}`:FIREBASE_ROOT;
+function testLink(path){if(!TEST_SESSION)return path;const url=new URL(path,location.href);url.searchParams.set('test',TEST_SESSION);return url.href;}
+if(TEST_SESSION&&typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>{
+ const badge=document.createElement('div');badge.textContent='TRYB TESTOWY · osobna baza wyników';badge.style.cssText='position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:9999;background:#cefa64;color:#111;padding:3px 14px;border-radius:0 0 8px 8px;font:700 12px Arial;pointer-events:none';document.body.appendChild(badge);
+ document.querySelectorAll('a[href="index.html"],a.brand').forEach(a=>a.href=testLink('index.html'));
+});
 const GAMES=[
  {key:'ninja',label:'Ninja Frog',short:'NF',color:'#cefa64',logo:'Ninja%20Frog'},
  {key:'bokser',label:'Bokser',short:'BX',color:'#ffa6b3',logo:'Boxer'},
