@@ -26,5 +26,5 @@ img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
 /* Show the complete artwork without cover cropping or thumbnail zoom. */
 
 
-/* Supplied game artwork: preserve the complete frame on every TV aspect ratio. */
-.ranking-art img{display:block;width:100%;height:100%;object-fit:contain;object-position:50% 50%;transform:none;opacity:.38}
+/* Supplied game artwork: fill both dimensions while keeping the complete frame. */
+.ranking-art img{display:block;width:100%;height:100%;object-fit:fill;object-position:50% 50%;transform:none;opacity:.38}
