@@ -17,10 +17,4 @@ img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
 .ranking .board-empty{background:rgba(17,17,27,.3)}
 .ranking .rank-name,.ranking .rank-score,.ranking .rank-number{text-shadow:0 2px 5px rgba(0,0,0,.7)}
 
-/* Official supplied TRiKI logo */
-.brand{display:block;flex-shrink:0;width:clamp(170px,18vw,370px);padding:12px;background:#222324;border-radius:12px;line-height:0;letter-spacing:normal}.brand img{display:block;width:100%;height:auto}@media(max-width:680px){.brand{width:150px;padding:8px}}
-
-.brand-partner{width:clamp(100px,10vw,210px);line-height:0;flex-shrink:0}.brand-partner img{display:block;width:100%;height:auto;border-radius:6px}@media(max-width:680px){.identity{gap:10px}.brand-partner{width:95px}}
-
-/* Blend the original brand mark into the page without a separate tile. */
-.brand{background:transparent;border-radius:0;padding:0}
+.identity{gap:26px}.brand{display:block;flex:0 0 auto;width:clamp(170px,16vw,280px);padding:0;background:none;border:0;border-radius:0;line-height:0;letter-spacing:normal}.brand img{display:block;width:100%;height:auto}.brand-partner{width:clamp(110px,8vw,150px);line-height:0;flex:0 0 auto}.brand-partner img{display:block;width:100%;height:auto}@media(max-width:680px){.identity{gap:16px}.brand{width:150px}.brand-partner{width:108px}}

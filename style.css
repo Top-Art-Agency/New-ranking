@@ -9,10 +9,4 @@ img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
 
 .view-controls{padding:12px 20px;border-bottom:1px solid var(--border)}.view-controls:has(button[hidden]){display:none}.row-actions{display:flex;gap:6px;align-items:center}.edit-row{font:inherit;font-size:12px;padding:7px 9px;border:1px solid #555068;border-radius:6px;color:#cefa64;background:#252333}.edit-row:hover{background:#36304a}#edit-error{color:#ffb2bd}#edit-dialog{max-height:90vh;overflow:auto}#edit-fields input{width:100%}
 
-/* Official supplied TRiKI logo */
-.brand{width:100%;max-width:190px;padding:10px;background:#222324;border-radius:10px;line-height:0;letter-spacing:normal}.brand img{display:block;width:100%;height:auto}.side-label{margin-top:40px}@media(max-width:680px){.brand{width:180px;vertical-align:middle}}
-
-.brand-partner{margin-top:12px;width:136px;line-height:0}.brand-partner img{display:block;width:100%;height:auto;border-radius:6px}@media(max-width:680px){.brand-partner{display:inline-block;margin:0 0 0 12px;vertical-align:middle;width:115px}}
-
-/* Blend the original brand mark into the page without a separate tile. */
-.brand{background:transparent;border-radius:0;padding:0}
+.brand{display:block;width:180px;max-width:100%;padding:0;background:none;border:0;border-radius:0;line-height:0;letter-spacing:normal}.brand img{display:block;width:100%;height:auto}.brand-partner{width:126px;line-height:0;margin-top:12px}.brand-partner img{display:block;width:100%;height:auto}.side-label{margin-top:40px}@media(max-width:680px){.brand{display:inline-block;width:160px;vertical-align:middle}.brand-partner{display:inline-block;width:112px;margin:0 0 0 18px;vertical-align:middle}}
