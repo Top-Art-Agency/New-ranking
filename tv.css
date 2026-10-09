@@ -20,7 +20,7 @@ img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
 .identity{gap:26px}.brand{display:block;flex:0 0 auto;width:clamp(170px,16vw,280px);padding:0;background:none;border:0;border-radius:0;line-height:0;letter-spacing:normal}.brand img{display:block;width:100%;height:auto}.brand-partner{width:clamp(110px,8vw,150px);line-height:0;flex:0 0 auto}.brand-partner img{display:block;width:100%;height:auto}@media(max-width:680px){.identity{gap:16px}.brand{width:150px}.brand-partner{width:108px}}
 
 
-.leader-bottom #game-short.has-art{padding:0;width:76px;height:60px;overflow:hidden}.leader-bottom #game-short img{display:block;width:100%;height:100%;object-fit:cover}
+.leader-bottom #game-short.has-art{padding:0;width:76px;height:76px;overflow:hidden}.leader-bottom #game-short img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;transform:none}
 
 
 /* Show the complete artwork without cover cropping or thumbnail zoom. */
