@@ -17,5 +17,6 @@ const GAMES=[
  {key:'galaxy',label:'Galaxy',short:'GX',color:'#9ebdff',logo:null,asset:'assets/galaxy.jpg'},
  {key:'wyscigi',label:'Wyścigi',short:'WY',color:'#7edfff',logo:null,asset:'assets/wyscigi.png'},
  {key:'frogjumper',label:'Frog Jumper',short:'FJ',color:'#b5ee72',logo:null,asset:'assets/frogjumper.jpg'},
- {key:'flickbattle',label:'Flick Battle',short:'FB',color:'#f6a6e5',logo:null,asset:'assets/flickbattle.jpg'}
+ {key:'flickbattle',label:'Flick Battle',short:'FB',color:'#f6a6e5',logo:null,asset:'assets/flickbattle.jpg'},
+ {key:'skoki',label:'Skoki narciarskie',short:'SK',color:'#95d9ff',logo:null,asset:'assets/skoki.png',tvAsset:'assets/skoki.png'}
 ];
