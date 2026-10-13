@@ -63,3 +63,15 @@ img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
  .leader-bottom #game-short.has-art{width:clamp(40px,20cqw,76px);height:auto;aspect-ratio:1}
  .leader-bottom>span:last-child{font-size:clamp(8px,3cqw,12px);letter-spacing:1px}
 }
+
+/* TV branding in the bottom of the best-score card. */
+.tv-header{justify-content:flex-end}
+.leader-bottom{position:relative;z-index:1;align-items:center;gap:14px}
+.leader-bottom #game-short{flex-shrink:0}
+.leader-brand{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-width:0;flex:1}
+.leader-brand .brand{width:60%;max-width:210px;min-width:0;flex:0 1 auto}
+.leader-brand .brand-partner{width:34%;max-width:115px;min-width:0;flex:0 1 auto}
+@media(max-width:620px){.leader .leader-bottom{display:flex;grid-column:1 / -1;grid-row:4;margin-top:10px}.leader-brand{width:auto}}
+
+/* Branding alone in the TV leader footer. */
+.leader-brand{justify-content:center;width:100%;flex:1}
