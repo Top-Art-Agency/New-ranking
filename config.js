@@ -19,5 +19,6 @@ const GAMES=[
  {key:'wyscigi',label:'Wyścigi',short:'WY',color:'#7edfff',logo:null,asset:'assets/wyscigi.png'},
  {key:'frogjumper',label:'Frog Jumper',short:'FJ',color:'#b5ee72',logo:null,asset:'assets/frogjumper.jpg'},
  {key:'flickbattle',label:'Flick Battle',short:'FB',color:'#f6a6e5',logo:null,asset:'assets/flickbattle.jpg'},
- {key:'skoki',label:'Skoki narciarskie',short:'SK',color:'#95d9ff',logo:null,asset:'assets/skoki-v2.png',tvAsset:'assets/skoki-v2.png'}
+ {key:'skoki',label:'Skoki narciarskie — turniej',short:'SK',color:'#95d9ff',logo:null,asset:'assets/skoki-v2.png',tvAsset:'assets/skoki-v2.png'},
+ {key:'skoki_dnia',label:'Skoki narciarskie — ranking dnia',sheetName:'Skoki — ranking dnia',short:'SD',color:'#95d9ff',logo:null,asset:'assets/skoki-v2.png',tvAsset:'assets/skoki-v2.png'}
 ];

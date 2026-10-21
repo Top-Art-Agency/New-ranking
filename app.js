@@ -50,7 +50,7 @@ function buildReport(all){
   let rows;
   if(duel){rows=[['Zwycięzca','Przegrany','Czas zapisu (Europe/Warsaw)']];for(const x of [...items].sort((a,b)=>(Number(b.ts)||0)-(Number(a.ts)||0)))rows.push([x.winner,x.loser,validDate(x.ts)]);}
   else{rows=[['Miejsce w rankingu','Nick','Wynik','Jury','Runda','Czas zapisu (Europe/Warsaw)','Status próby']];const best=TrikiRanking.best(items).sort(byScore),ranks=new Map();let rank=1;best.forEach((x,i)=>{if(i===0||x.score!==best[i-1].score)rank=i+1;ranks.set(x.id,rank);});for(const x of [...items].sort(byScore))rows.push([ranks.get(x.id)??'',x.name,x.score,x.jury??'',x.round??'',validDate(x.ts),ranks.has(x.id)?'Najlepszy wynik':'Historia']);}
-  sheets.push({name:g.label,rows,widths:duel?[30,30,32]:[22,30,18,12,15,32,22]});
+  sheets.push({name:g.sheetName||g.label,rows,widths:duel?[30,30,32]:[22,30,18,12,15,32,22]});
  }
  const corrections=[['Gra','ID próby','Czas korekty (Europe/Warsaw)','Przed korektą','Po korekcie']];for(const {g,items} of all)for(const row of items)for(const edit of Object.values(row._edits||{})){if(edit&&typeof edit==='object')corrections.push([g.label,row.id,validDate(edit.ts),JSON.stringify(edit.before??{}),JSON.stringify(edit.after??{})]);}if(corrections.length>1)sheets.push({name:'Historia korekt',rows:corrections,widths:[24,44,32,60,60]});
  return TrikiExcel.workbook([{name:'Podsumowanie',rows:summary,widths:[24,18,55,32]},...sheets]);
