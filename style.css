@@ -12,3 +12,5 @@ img[src="assets/wyscigi.png"]{object-position:50% 10%;transform:scale(1.5)}
 .brand{display:block;width:180px;max-width:100%;padding:0;background:none;border:0;border-radius:0;line-height:0;letter-spacing:normal}.brand img{display:block;width:100%;height:auto}.brand-partner{width:126px;line-height:0;margin-top:12px}.brand-partner img{display:block;width:100%;height:auto}.side-label{margin-top:40px}@media(max-width:680px){.brand{display:inline-block;width:160px;vertical-align:middle}.brand-partner{display:inline-block;width:112px;margin:0 0 0 18px;vertical-align:middle}}
 
 .game-icon img[src="assets/skoki-v2.png"],.game-art img[src="assets/skoki-v2.png"]{object-fit:contain;object-position:center;transform:none;background:#fff}
+
+.sponsored-art{position:relative;display:block;width:100%;height:100%;overflow:hidden}.sponsored-art img.sponsor-logo{position:absolute;bottom:4%;right:4%;width:66%;height:auto;object-fit:contain;transform:none;filter:drop-shadow(0 1px 2px #0009)}

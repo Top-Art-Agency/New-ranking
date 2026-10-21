@@ -13,7 +13,7 @@ const requestedGame=typeof location==='undefined'?null:new URLSearchParams(locat
 let current=GAMES.some(g=>g.key===requestedGame)?requestedGame:'ninja',busy=false,readSequence=0,noticeTimeout=null,deleteTarget=null;
 const cache=new Map(),drafts=new Map(),attempts=new Map();
 const PAGE_SIZE=50;let resultPage=0,liveFeed=null,listPending=null;let historyMode=false,editTarget=null;
-function logo(g){if(g.asset)return `<img src="${g.asset}" alt="" loading="lazy">`;return g.logo?`<img src="https://triki.zabka.pl/images/game-image-${g.logo}.png" alt="" loading="lazy">`:esc(g.short);}
+function logo(g){if(g.sponsor)return `<span class="sponsored-art"><img src="${esc(g.asset)}" alt="" loading="lazy"><img class="sponsor-logo" src="${esc(g.sponsor)}" alt="Monte" loading="lazy"></span>`;if(g.asset)return `<img src="${g.asset}" alt="" loading="lazy">`;return g.logo?`<img src="https://triki.zabka.pl/images/game-image-${g.logo}.png" alt="" loading="lazy">`:esc(g.short);}
 function fallbackImages(){document.querySelectorAll('img').forEach(img=>{img.onerror=()=>{const host=img.parentElement;host.textContent=host.dataset.short||gameByKey(current).short;};});}
 function notify(message,type='ok'){clearTimeout(noticeTimeout);$('notice').textContent=message;$('notice').className=type;$('notice').hidden=false;noticeTimeout=setTimeout(()=>{$('notice').hidden=true;},type==='error'?15000:6500);}
 function state(title,detail,type){$('status-title').textContent=title;$('status-detail').textContent=detail;$('status-icon').className='status-icon '+type;}
